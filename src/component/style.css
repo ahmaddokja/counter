@@ -1,0 +1,26 @@
+.cont{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.incBtn{
+    padding:15px;
+    display:flex;
+    background-color:green;
+    margin: 10px;
+    display: flex;
+    cursor:pointer;
+}
+
+.decBtn{
+    padding:15px 18px;
+    display:flex;
+    background-color:red;
+    margin: 10px;
+    cursor:pointer;
+}
+
+span{
+    font-size: 25px;
+}

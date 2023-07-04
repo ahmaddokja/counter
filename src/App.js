@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Counter from "./component/counter";
 
 function App() {
+  const [cont1, setCount1] = useState(0);
+  const [cont2, setCount2] = useState(0);
+  const [cont3, setCount3] = useState(0);
+
+  const increaseCount1 = () => {
+    setCount1((prev) => ++prev);
+  };
+
+  const decreaseCount1 = () => {
+    setCount1((prev) => --prev);
+  };
+  const increaseCount2 = () => {
+    setCount2((prev) => ++prev);
+  };
+
+  const decreaseCount2 = () => {
+    setCount2((prev) => --prev);
+  };
+  const increaseCount3 = () => {
+    setCount3((prev) => ++prev);
+  };
+
+  const decreaseCount3 = () => {
+    setCount3((prev) => --prev);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter
+        valueOfCount={cont1}
+        increase={increaseCount1}
+        decrease={decreaseCount1}
+      />
+      <Counter
+        valueOfCount={cont2}
+        increase={increaseCount2}
+        decrease={decreaseCount2}
+      />
+      <Counter
+        valueOfCount={cont3}
+        increase={increaseCount3}
+        decrease={decreaseCount3}
+      />
     </div>
   );
 }
